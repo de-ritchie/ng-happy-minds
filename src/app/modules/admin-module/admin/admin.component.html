@@ -1,0 +1,24 @@
+<mat-card class="example-card">
+    <p class = "mat-h2">Upload file in mentioned format</p>
+    <p class = "mat-p">Upload a file in text format with word in a line and subsquent lines are it's definition</p>
+    <p class = "mat-p">Add a seperator b/w 2 words</p>
+    <p class = "mat-p">Upload text file < 200 MB</p>
+    <p class = "mat-p">Example</p>
+    <code>
+      Gain<br/>
+      A gain is an increase in something, especially something good.<br/>
+      You gain knowledge by attending philosophy lectures and reading books.<br/>
+      <br/>
+      ---------------------------<br/>
+      Please<br/>
+      To please someone is to give them pleasure or to make them happy.<br/>
+      This is also a word for polite requests like, "Could you please pass the milk?"<br/>
+      ---------------------------<br/>
+    </code>
+	<form>
+    <input #variable type="file" (change)= "onFileSelected($event)">
+    <br/>
+    <button mat-raised-button (click)="upload()" color="primary">Upload</button>
+  </form>
+  <h3 *ngIf = "flag">{{result}}</h3>
+</mat-card>

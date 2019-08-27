@@ -1,0 +1,15 @@
+<mat-card class="example-card">
+	<form>
+		<label class = "mat-h2">Only Admin !!!</label>
+    <br/>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Username" [(ngModel)]="username" name="username" required>
+    </mat-form-field>
+    <br/>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Password" [(ngModel)]="password"type="password" name="password" required>
+    </mat-form-field>
+    <br/>
+    <button mat-raised-button (click)="login()" color="primary">Login</button>
+  </form>
+</mat-card>

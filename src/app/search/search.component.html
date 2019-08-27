@@ -1,0 +1,9 @@
+<mat-card class="card">
+  <form class="form">
+  <mat-form-field class="full-width">
+    <input #ip matInput placeholder="Let's get things started" value="">
+  </mat-form-field>
+  </form>
+  <button mat-raised-button (click)="lookup(ip.value)" color="primary">Lookup</button>
+</mat-card>
+<app-result></app-result>
