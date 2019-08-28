@@ -10,7 +10,7 @@ export class LoginService {
   token: string;
 
   constructor(private http: HttpClient){
-    this.host = 'https://3101dd61.ngrok.io/';
+    this.host = 'https://app-happy-minds.herokuapp.com/';
   }
 
   getHeaders(){

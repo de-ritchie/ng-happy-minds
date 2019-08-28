@@ -11,7 +11,12 @@ export class SearchComponent implements OnInit {
 
   result: any
 
-  constructor(private searchService: SearchService) {}
+  constructor(private searchService: SearchService) {
+    this.result = {
+      name: "",
+      definitions: []
+    };
+  }
 
   ngOnInit() {}
 
