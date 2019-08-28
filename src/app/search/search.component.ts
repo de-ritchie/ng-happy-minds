@@ -9,6 +9,8 @@ import { SearchService } from './search.service';
 })
 export class SearchComponent implements OnInit { 
 
+  result: any
+
   constructor(private searchService: SearchService) {}
 
   ngOnInit() {}
@@ -19,6 +21,9 @@ export class SearchComponent implements OnInit {
     .subscribe(
       res => {
         console.log(res);
+        if(res.name && res.definitions){
+          this.result = res;
+        }
       }
     )
   }

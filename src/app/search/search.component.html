@@ -6,4 +6,4 @@
   </form>
   <button mat-raised-button (click)="lookup(ip.value)" color="primary">Lookup</button>
 </mat-card>
-<app-result></app-result>
+<app-result *ngIf = "result && result.name && result.name.length > 0" [result] = "result"></app-result>
