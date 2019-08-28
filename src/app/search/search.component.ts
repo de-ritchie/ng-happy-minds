@@ -17,12 +17,24 @@ export class SearchComponent implements OnInit {
 
   lookup(val){
     console.log(val);
+    if(val.length == 0){
+      this.result = {
+      name: "Word length should be at least 1",
+      definitions: []
+    };
+      return;
+    }
     this.searchService.search(val)
     .subscribe(
       res => {
         console.log(res);
-        if(res.name && res.definitions){
+        if(res && res.name && res.definitions){
           this.result = res;
+        } else{
+          this.result = {
+            name: "Word not found",
+            definitions: []
+          };
         }
       }
     )
